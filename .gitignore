@@ -1,3 +1,3 @@
-*lock.toml
+*.lock
 *lock.lua
 target
