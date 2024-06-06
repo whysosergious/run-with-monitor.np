@@ -1,5 +1,5 @@
 [package]
-name = "run_with_monitor"
+name = "run-with-monitor"
 version = "0.1.0"
 edition = "2021"
 
