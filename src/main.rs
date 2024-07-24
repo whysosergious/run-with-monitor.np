@@ -55,27 +55,6 @@ async fn run_command(mut commands: Vec<Vec<String>>) {
 
         run_and_wait(child, &cmd).await;
 
-        // !!! moved to sig_handler fn, might be a good idea to use a oneshit channel to resume execution instead
-        // if !commands.is_empty() {
-        //     let callback_cmd = commands[0].remove(0);
-        //     let callback_args = commands[0].drain(..).collect::<Vec<String>>();
-        //     commands.remove(0);
-        //
-        //     let callback_child = spawn_process(&callback_cmd, &callback_args);
-        //
-        //     println!(
-        //         "running callback: {} {}",
-        //         callback_cmd,
-        //         callback_args.join(" ")
-        //     );
-        //
-        //     run_and_wait(callback_child, &callback_cmd).await;
-        // }
-
-        /*
-         * ## todo later - if commands vector is still not empty, run_command again
-         */
-
         // do on final-finally (main task process is done)
         println!("killing main");
 
